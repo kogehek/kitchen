@@ -1,0 +1,423 @@
+html { 
+	height: 100%; 
+}
+body * {
+	box-sizing: border-box;
+	margin: 0px;
+	
+}
+body {
+	display: flex; flex-direction: column; height: 100%; 
+	margin: 0px;
+}
+.promo-background {
+	position: fixed;
+	top: 0;
+    left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-size: cover;
+    background-image: url("/img/Start_main.jpg");
+    z-index: -1;
+}
+#upload {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 120px;
+    box-shadow: 0 0 10px rgba(55,178,182,0.6);
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.menu {
+	background-color: rgba(32,32,32,0.7);
+	padding: 25px;
+	width: 320px;
+	margin: 0 auto; 
+	margin-top: 20px;
+	color: rgb(255, 84, 84);
+	text-align: center;
+	font-size: 120%;
+
+}
+
+.menu .inp {
+	width:100%;
+	height: 50px;
+	padding: 10px;
+	margin-top: 2px;
+	font-size: 90%;
+
+}
+
+.main-name{
+	text-align: center;
+	color:white;
+	margin-top: 25px;
+	font-size: 650%;
+	text-shadow: 0 0 16px rgba(0,0,0,0.5);
+
+}
+
+.down-block {
+	flex: 0 0 auto;
+
+	margin-right: 0px;
+	padding: 20px;
+	background-color: rgba(32,32,32,0.7);
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.main-content {
+	flex: 1 0 auto;
+	position: relative;
+
+}
+
+
+.flex-container-menu {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+	
+}
+.flex-container-menu .menu-flex {
+	display: block;
+    color: #000;
+    padding: 20px;
+    text-decoration: none;
+
+}
+
+.flex-container-menu .menu-flex:hover {
+	background-color: #555;
+    color: white;
+}
+
+.flex-container-menu .block-last {
+	margin-left: auto;
+}
+
+.b-btn {
+	border: none;
+	background: none;
+	cursor: pointer;
+	outline: none;
+	width: 100%;
+	height: 100%;
+}
+
+.user-name {
+	position: absolute;
+	overflow: hidden;
+	padding: 3%;
+	font-size: 150%;
+}
+
+.user-name a {
+	color: white;
+	text-decoration: none;
+}
+
+.user-background {
+	position: fixed;
+	top: 0;
+    left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-size: cover;
+    background-image: url("/img/Start_main.jpg");
+    z-index: -1;
+}
+
+.my-flex-container {
+	margin: 0 auto;
+}
+
+@media all and (min-width: 240px) {
+	.my-flex-container{
+		width: 240px;
+	}
+}
+@media all and (min-width: 480px) {
+	.my-flex-container{
+		width: 480px;
+	}
+}
+@media all and (min-width: 720px) {
+	.my-flex-container{
+		width: 720px;
+	}
+}
+@media all and (min-width: 960px) {
+	.my-flex-container{
+		width: 960px;
+	}
+}
+@media all and (min-width: 1200px) {
+	.my-flex-container{
+		width: 1200px;
+	}
+}
+@media all and (min-width: 1400px) {
+	.my-flex-container{
+		width: 1440px;
+	}
+}
+@media all and (min-width: 1680px) {
+	.my-flex-container{
+		width: 1680px;
+	}
+}
+@media all and (min-width: 1920px) {
+	.my-flex-container{
+		width: 1920px;
+	}
+}
+
+
+
+.my-flex-block {
+	float: left;
+	position: relative;
+	width: 240px;
+	height: 240px;
+}
+
+
+
+
+
+
+
+/*.block-info {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	padding: 1.5%;
+
+}
+
+.info {
+	cursor: pointer;
+	position: relative;
+	background-color: #555;
+	width: 100%;
+	height: 100%;
+}*/
+
+/*.before {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+*/
+
+
+/*.butten-work {
+	display: inline-block;
+	position: absolute;
+	bottom: 4%;
+	width: 100%;
+	height: 20%;
+}
+
+.butten-form {
+
+	height: 100%;
+	width: 100%;
+}*/
+
+.my-flex-block-padding {
+	overflow: hidden;
+	width: 230px;
+	height: 230px;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+}
+.my-flex-block-content {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #999;
+}
+.block-content {
+	width: 100%;
+	height: 60%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*background-color:rgba(32,32,32,0.1);*/
+	color: black;
+	overflow: hidden;
+	padding: 0%;
+	text-align: center;
+	font-size: 180%;
+
+}
+.block-content-time {
+	width: 100%;
+	height: 10%;
+	position: absolute;
+	left: 0;
+	top: 60%;
+	background-color:rgba(128,128,128,0.4);
+	overflow: hidden;
+	padding: 1% 10%;
+	color: black;
+	font-size: 110%;
+}
+.block-content-favorits {
+	width: 100%;
+	height: 10%;
+	position: absolute;
+	left: 0;
+	top: 70%;
+	background-color:rgba(128,128,128,0.4);
+	overflow: hidden;
+	padding: 1% 10%;
+	color: black;
+	font-size: 110%;
+}
+
+
+.block-buttons {
+	width: 100%;
+	height: 20%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(32,32,32,0.7);
+}
+.block-button {
+	width: 20%;
+	padding-top: 20%;
+	position: absolute;
+	top: 0;
+	cursor: pointer;
+}
+.block-button-in-home {
+	background-image: url("/img/favorits.svg");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.block-button-in {
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.block-button-in-check {
+	background-image: url("/img/favorits_check.svg");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.block-button.button-trash {
+	left: 0;
+}
+.block-button.button-edit {
+	left: 20%;
+}
+
+.block-button.button-favorits {
+	left: 80%;
+}
+
+.add-work {
+	width: 100%;
+	height: 100%;
+	padding: 4%;
+}
+
+.card-img {
+	width: 100%;
+	height: 100%;
+
+}
+
+.padding-rec {
+	padding: 0 20px;
+
+}
+
+.dispatch {
+	display: inline-block;
+	padding: 5px;
+}
+
+.time-width {
+	width: 100%;
+}
+
+.dispatch-padding {
+	padding: 10px;
+}
+
+.buttan-unstyle {
+	border: none;
+	background: none;
+	cursor: pointer;
+	outline: none;
+	width: 250px;
+    margin: 0 auto; 
+}
+
+.buttan-upload {
+	background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+}
+
+.img-download {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.img-download + label {
+
+ 	background-color: #e7e7e7; /* Green */
+    color: black;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer; /* "hand" cursor */
+    width: 285px;
+}
