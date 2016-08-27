@@ -60,10 +60,10 @@
 			$report1 = ["newUser"  => "ok"];
 			$report = $report + $report1;
 			$mysqli->query('INSERT INTO users SET 
-			`name`="'.mysql_real_escape_string($name).'", 
-			`email`="'.mysql_real_escape_string($email).'", 
-			`password`="'.mysql_real_escape_string($password).'",
-			`remember_token`="'.mysql_real_escape_string($token).'"');
+			`name`="'.mysqli_real_escape_string($name).'", 
+			`email`="'.mysqli_real_escape_string($email).'", 
+			`password`="'.mysqli_real_escape_string($password).'",
+			`remember_token`="'.mysqli_real_escape_string($token).'"');
 		}	
 	}
 
