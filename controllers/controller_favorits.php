@@ -7,5 +7,5 @@
 
 	$recipes = RecipeRepository::getFavorits($user->getId());
 
-	$body = "/views/view_favorits.php";
-	require "/views/view_global.php";
+	$body = "views/view_favorits.php";
+	require "views/view_global.php";
