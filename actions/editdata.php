@@ -11,6 +11,6 @@
 	$recipe->setRecipe($_POST['content']);
 	$recipe->save();
 
-	//$mysqli->query('UPDATE `recipes` SET `recipe`="'.mysql_escape_string($recipe).'" WHERE `id` ='.$id);
+	//$mysqli->query('UPDATE `recipes` SET `recipe`="'.mysql_real_escape_string($recipe).'" WHERE `id` ='.$id);
 	echo json_encode(['url' => '/profile'.$recipe->getUserId()]);
 

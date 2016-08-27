@@ -26,9 +26,9 @@
 
 			$mysqli->query('INSERT INTO recipes SET 
 				`user_id`="'.$user->getId().'",
-				`recipe`="'.mysql_escape_string($_POST['content']).'",
-				`name`="'.mysql_escape_string($_POST['Name']).'",
-				`Time`="'.mysql_escape_string($_POST['Time']).'"
+				`recipe`="'.mysql_real_escape_string($_POST['content']).'",
+				`name`="'.mysql_real_escape_string($_POST['Name']).'",
+				`Time`="'.mysql_real_escape_string($_POST['Time']).'"
 			');
 
 			$inFile = $_FILES["filename"]["tmp_name"];
