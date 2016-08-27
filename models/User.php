@@ -9,7 +9,12 @@
 
 		function __construct()
 		{
-			$data = getDataOne('SELECT * FROM `users` WHERE `remember_token` = "'.$_COOKIE['token'].'"');
+			if (isset($_COOKIE['token'])) {
+				$data = getDataOne('SELECT * FROM `users` WHERE `remember_token` = "'.$_COOKIE['token'].'"');
+			} else {
+				$data = null;
+			}
+
 			if ($data) {
 				$this->id = $data->id;
 				$this->name = $data->name;
