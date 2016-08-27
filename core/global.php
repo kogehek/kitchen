@@ -1,6 +1,6 @@
 <?php
 	
-	$header = "/views/blocks/header.php";
+	$header = "views/blocks/header.php";
 
 	$url = $_SERVER['REQUEST_URI'];
 
