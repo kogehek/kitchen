@@ -5,9 +5,6 @@
 	$email = $_POST['email'];
 	$name = $_POST['name'];
 	$password = $_POST['password'];
-
-
-
 	$registOk = true;
 	$report = [];
 
@@ -53,16 +50,11 @@
 		$registOk = false;
 	}	
 
-
-	
-
 	if ($registOk == true) {
 
 		$token = hash('sha256', $name);
 		
-
 		setcookie ("token", $token, 60 * 60 * 24 * 60 + time(), '/', NULL, 0 );  
-
 		
 		if (isset($token)) {
 			$report1 = ["newUser"  => "ok"];
@@ -72,20 +64,9 @@
 			`email`="'.mysql_escape_string($email).'", 
 			`password`="'.mysql_escape_string($password).'",
 			`remember_token`="'.mysql_escape_string($token).'"');
-		}
-
-
-	
-		
+		}	
 	}
 
 	echo json_encode($report);
-	
-	// if ($report) {
-	// 	header("Location: /");
-	// }
-
-	
-
 
 

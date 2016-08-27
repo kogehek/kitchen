@@ -15,7 +15,6 @@
 						</div>
 					</div>
 				</div>
-
 				<? foreach ($recipes as $recipe) {?>
 					<div class="my-flex-block">
 							<div class="my-flex-block-padding">
@@ -52,10 +51,8 @@
 				
 			</div>
 			<div class="user-background"></div>
-
 		<?
 	}
-	
 	else {
 		?>
 			<div>

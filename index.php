@@ -1,6 +1,5 @@
 <?php
 
-
 require_once '/core/mysql.php';
 require_once '/core/global.php';
 require_once '/models/User.php';
@@ -11,13 +10,6 @@ require_once '/repository/profile_repository.php';
 
 
 $user = new User();
-
-// var_dump($user->isLogged());
-// exit();
-	// if (!$user->isLogged() && $url !== "/registration") {
-	// 	header("Location: /registration");
-	// 	exit();
-	// }
 
 	$pattern = "/work(.*)/iu";
 	preg_match($pattern, $url, $workId);

@@ -1,6 +1,5 @@
 <?php
 
-
 	require_once '../core/mysql.php';
 	require_once '../models/User.php';
 	require_once '../models/recipe.php';

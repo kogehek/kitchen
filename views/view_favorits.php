@@ -1,6 +1,4 @@
-
 <div class="my-flex-container">
-	
 	<? foreach ($recipes as $recipe) {?>
 		<div class="my-flex-block">
 			<div class="my-flex-block-padding">
@@ -19,7 +17,7 @@
 
 					</a>
 					<div class="block-buttons">
-						<div>
+						<div class="user-name">
 							<a href="/profile<?= $recipe->getUserId() ?>">
 								<div><?= $recipe->getName() ?></div>
 							</a>
@@ -32,11 +30,5 @@
 			</div>
 		</div>	
 	<? } ?>
-	
-	
-
-
-
 </div>
-
 <div class="user-background"></div>

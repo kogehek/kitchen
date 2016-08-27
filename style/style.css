@@ -1,15 +1,17 @@
 html { 
 	height: 100%; 
 }
+
 body * {
 	box-sizing: border-box;
 	margin: 0px;
-	
 }
+
 body {
 	display: flex; flex-direction: column; height: 100%; 
 	margin: 0px;
 }
+
 .promo-background {
 	position: fixed;
 	top: 0;
@@ -22,6 +24,7 @@ body {
     background-image: url("/img/Start_main.jpg");
     z-index: -1;
 }
+
 #upload {
     background-color: #008CBA;
     border: none;
@@ -79,7 +82,6 @@ body {
 	position: relative;
 
 }
-
 
 .flex-container-menu {
 	display: flex;
@@ -187,60 +189,12 @@ body {
 	}
 }
 
-
-
 .my-flex-block {
 	float: left;
 	position: relative;
 	width: 240px;
 	height: 240px;
 }
-
-
-
-
-
-
-
-/*.block-info {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0px;
-	left: 0px;
-	padding: 1.5%;
-
-}
-
-.info {
-	cursor: pointer;
-	position: relative;
-	background-color: #555;
-	width: 100%;
-	height: 100%;
-}*/
-
-/*.before {
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-}
-*/
-
-
-/*.butten-work {
-	display: inline-block;
-	position: absolute;
-	bottom: 4%;
-	width: 100%;
-	height: 20%;
-}
-
-.butten-form {
-
-	height: 100%;
-	width: 100%;
-}*/
 
 .my-flex-block-padding {
 	overflow: hidden;
@@ -250,6 +204,7 @@ body {
 	left: 5px;
 	top: 5px;
 }
+
 .my-flex-block-content {
 	width: 100%;
 	height: 100%;
@@ -258,6 +213,7 @@ body {
 	top: 0;
 	background-color: #999;
 }
+
 .block-content {
 	width: 100%;
 	height: 60%;
@@ -272,6 +228,7 @@ body {
 	font-size: 180%;
 
 }
+
 .block-content-time {
 	width: 100%;
 	height: 10%;
@@ -284,6 +241,7 @@ body {
 	color: black;
 	font-size: 110%;
 }
+
 .block-content-favorits {
 	width: 100%;
 	height: 10%;
@@ -297,7 +255,6 @@ body {
 	font-size: 110%;
 }
 
-
 .block-buttons {
 	width: 100%;
 	height: 20%;
@@ -306,6 +263,7 @@ body {
 	bottom: 0;
 	background-color: rgba(32,32,32,0.7);
 }
+
 .block-button {
 	width: 20%;
 	padding-top: 20%;
@@ -313,6 +271,7 @@ body {
 	top: 0;
 	cursor: pointer;
 }
+
 .block-button-in-home {
 	background-image: url("/img/favorits.svg");
 	background-repeat: no-repeat;
@@ -322,6 +281,7 @@ body {
 	top: 0;
 	left: 0;
 }
+
 .block-button-in {
 	background-repeat: no-repeat;
 	position: absolute;
@@ -330,6 +290,7 @@ body {
 	top: 0;
 	left: 0;
 }
+
 .block-button-in-check {
 	background-image: url("/img/favorits_check.svg");
 	background-repeat: no-repeat;
@@ -339,9 +300,11 @@ body {
 	top: 0;
 	left: 0;
 }
+
 .block-button.button-trash {
 	left: 0;
 }
+
 .block-button.button-edit {
 	left: 20%;
 }
@@ -359,12 +322,10 @@ body {
 .card-img {
 	width: 100%;
 	height: 100%;
-
 }
 
 .padding-rec {
 	padding: 0 20px;
-
 }
 
 .dispatch {

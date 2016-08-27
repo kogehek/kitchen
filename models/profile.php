@@ -1,5 +1,4 @@
 <?php
-
 	class Profile  
 	{
 		private $id;

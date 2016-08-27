@@ -5,11 +5,7 @@
 
 	$user = new User();
 
-	
-	// var_dump($_POST);
-
 	echo 1;
-
 
 	if ($_POST['click'] == 'add') {
 

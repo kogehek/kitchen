@@ -16,7 +16,6 @@
 		<section class="main-content"><?php require $body ?></section>
 
 		<div class="down-block">
-			<a href="/about">About</a>
 			© 2016 Kogehek
 		</div>
 	</body>

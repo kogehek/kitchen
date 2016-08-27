@@ -21,10 +21,6 @@ $( document ).ready(function() {
 		}, "json");
 	});
 
-
-
-
-
 	$('.favorits').on('click', function() {
 		var self = this;
 		if ($(self).find('.block-button-in-check').hasClass("block-button-in-check")) {
@@ -56,10 +52,6 @@ $( document ).ready(function() {
 			}, "json");
 		}
 	});
-
-
-
-
 });
 
     function sendForm(user_id)
