@@ -1,12 +1,16 @@
 	<script>
 	$(function() {
 	    $('#content').redactor({ 
-	        imageUpload: '/actions/uploadImg.php'
+	        imageUpload: '/action',
+	            uploadImageFields: {
+            action: "img"
+        }
 	    });
 	});
 	</script>
 
-	<form class="padding-rec" action="../actions/upload.php" method="post" enctype="multipart/form-data">
+	<form class="padding-rec" action="/action" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="action" value="upload_work">
 		<textarea id="content" name="content"></textarea>
 		<div class="dispatch">
 			<div class="dispatch">

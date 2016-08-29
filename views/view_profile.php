@@ -32,8 +32,9 @@
 										</div>
 									</a>
 									<div class="block-buttons">
-										<form action="/actions/delete_work.php" method="post">
+										<form action="/action" method="post">
 											<input type="hidden" name="work_id" value="<?= $recipe->getId() ?>">
+											<input type="hidden" name="action" value="delete_work">
 											<div class="block-button button-trash">
 												<input type="image" src="/img/trash.svg" class="block-button-in">
 											</div>
@@ -70,9 +71,9 @@
 							</div>
 						</a>
 						<div class="block-buttons">
-							<div>
+							<div class="user-name">
 								<a href="/profile<?= $recipe->getUserId() ?>">
-									<div><?= $recipe->getName ?></div>
+									<div><?= $recipe->getName() ?></div>
 								</a>
 							</div>
 							<div class="favorits block-button button-favorits" data-id="<?= $recipe->getId() ?> " >

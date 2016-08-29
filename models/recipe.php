@@ -22,17 +22,17 @@
 			if ($this->id) {
 				$GLOBALS['mysqli']->query('UPDATE recipes SET 
 					`user_id`="'.$this->user_id.'",
-					`recipe`="'.$mysqli->real_escape_string($this->recipe).'",
-					`name`="'.$mysqli->real_escape_string($this->name).'",
-					`time`="'.$mysqli->real_escape_string($this->time).'" 
+					`recipe`="'.$GLOBALS['mysqli']->real_escape_string($this->recipe).'",
+					`name`="'.$GLOBALS['mysqli']->real_escape_string($this->name).'",
+					`time`="'.$GLOBALS['mysqli']->real_escape_string($this->time).'" 
 					WHERE id = '.$this->id.'
 				');
 			} else {
 				$GLOBALS['mysqli']->query('INSERT INTO recipes SET 
 					`user_id`="'.$this->user_id.'",
-					`recipe`="'.$mysqli->real_escape_string($this->recipe).'",
-					`name`="'.$mysqli->real_escape_string($this->name).'",
-					`time`="'.$mysqli->real_escape_string($this->time).'"
+					`recipe`="'.$GLOBALS['mysqli']->real_escape_string($this->recipe).'",
+					`name`="'.$GLOBALS['mysqli']->real_escape_string($this->name).'",
+					`time`="'.$GLOBALS['mysqli']->real_escape_string($this->time).'"
 				');
 				$this->id = $GLOBALS['mysqli']->insert_id;
 			}

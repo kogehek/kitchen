@@ -53,6 +53,9 @@ switch ($url) {
 	case '/registration':
 		require_once 'controllers/controller_registration.php';
 		exit;
+	case '/action':
+		require_once 'controllers/controller_actions.php';
+		exit;
 	case '/about':
 		require_once 'controllers/controller_about.php';
 		exit;

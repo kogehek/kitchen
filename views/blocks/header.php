@@ -5,7 +5,8 @@
 		<a href="/profile<?= $user->getId() ?>" class="menu-flex block-last" >
 		<i class="fa fa-user"></i> <?= $user->getName() ?>
 	</a>
-	<form action="/actions/actions.php" method="post">
+	<form action="/action" method="post">
+
 		<input type="hidden" name="action" value="logout">
 		<button type="submit" class="menu-flex block-last b-btn" value="logout"><i class="fa fa-sign-out"></i> Logout</button>
 	</form>

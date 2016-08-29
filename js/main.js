@@ -1,13 +1,11 @@
 $( document ).ready(function() {
 
-
 	$('#upload').on('click', function() {
-
 		$('#name-rep').html('');
 		$('#email-rep').html('');
 		$('#password-rep').html('');
-
-		$.post('../actions/registration.php', {
+		$.post('/action', {
+			action: "registration",
 			password: $('#password').val(),
 			name: $('#name').val(),
 			email: $('#email').val()
@@ -24,7 +22,8 @@ $( document ).ready(function() {
 	$('.favorits').on('click', function() {
 		var self = this;
 		if ($(self).find('.block-button-in-check').hasClass("block-button-in-check")) {
-			$.post('../actions/favorits.php', {
+			$.post('/action', {
+				action: "favorit",
 				id: $(this).data('id'),
 				user_id_recipe: $(this).data('user_id_recipe'),
 				click: "delete",
@@ -35,11 +34,11 @@ $( document ).ready(function() {
 				$(self).find('.block-button-in-check').addClass("block-button-in-home");
 				$(self).find('.block-button-in-check').removeClass("block-button-in-check");
 			}, "json");
-
-
 		}
+		
 		else {
-			$.post('../actions/favorits.php', {
+			$.post('/action', {
+				action: "favorit",
 				id: $(this).data('id'),
 				user_id_recipe: $(this).data('user_id_recipe'),
 				click: "add",
@@ -67,7 +66,8 @@ $( document ).ready(function() {
     function sendFormEdit(id)
     {
     	
-        $.post('/actions/editdata.php', {
+        $.post('/action', {
+        	action: "edit_work",
             content: $('#content').redactor('code.get'),
             id: id
         }, function(data){

@@ -1,7 +1,10 @@
 <script>
 $(function() {
     $('#content').redactor({ 
-        imageUpload: '/actions/uploadImg.php'
+        imageUpload: '/action',
+        uploadImageFields: {
+            action: "img"
+        }
     });
 });
 </script>
