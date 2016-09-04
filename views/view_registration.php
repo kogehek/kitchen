@@ -9,7 +9,8 @@
 
 			<input placeholder="Пароль" class="inp" id="password" type="password" name="password"><br>
 			<div class="error" id="password-rep"></div>
-			<button class="button button1" id="upload">OK</button>
+			<button class="button button1 ok" id="upload">OK</button>
+			<a href="/authorization"><button class="button button1 regis">Authorization</button></a>
 		</div>
 		<div class="promo-background"></div>
 <script>

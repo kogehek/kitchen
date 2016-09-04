@@ -19,6 +19,22 @@ $( document ).ready(function() {
 		}, "json");
 	});
 
+	$('#enter').on('click', function() {
+		$('#name-rep').html('');
+		$('#password-rep').html('');
+		$.post('/action', {
+			action: "enter",
+			password: $('#password').val(),
+			name: $('#name').val(),
+		}, function(data){
+			$('#name-rep').html(data['name']);
+			$('#password-rep').html(data['password']);
+			if (data['enter']) {
+				window.location.href ="/";
+			}	
+		}, "json");
+	});
+
 	$('.favorits').on('click', function() {
 		var self = this;
 		if ($(self).find('.block-button-in-check').hasClass("block-button-in-check")) {

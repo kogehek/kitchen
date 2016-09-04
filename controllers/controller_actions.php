@@ -95,6 +95,32 @@
 		}
 	}
 
+	if ($_POST['action'] == 'img') {
+		$dir = 'img/work_img/';
+		 
+		$_FILES['file']['type'] = strtolower($_FILES['file']['type']);
+		 
+		if ($_FILES['file']['type'] == 'image/png'
+		|| $_FILES['file']['type'] == 'image/jpg'
+		|| $_FILES['file']['type'] == 'image/gif'
+		|| $_FILES['file']['type'] == 'image/jpeg'
+		|| $_FILES['file']['type'] == 'image/pjpeg')
+		{
+		    // setting file's mysterious name
+		    $filename = md5(date('YmdHis')).'.jpg';
+		    $file = $dir.$filename;
+		 
+		    // copying
+		    move_uploaded_file($_FILES['file']['tmp_name'], $file);
+		 
+		    // displaying file
+		    $array = array(
+		        'filelink' => 'img/work_img/'.$filename
+		    );
+		    echo stripslashes(json_encode($array));
+		}
+	}
+
 	if ($_POST['action'] == 'registration') {
 		$email = $_POST['email'];
 		$name = $_POST['name'];
@@ -163,28 +189,24 @@
 		echo json_encode($report);
 	}
 
-	if ($_POST['action'] == 'img') {
-		$dir = 'img/work_img/';
-		 
-		$_FILES['file']['type'] = strtolower($_FILES['file']['type']);
-		 
-		if ($_FILES['file']['type'] == 'image/png'
-		|| $_FILES['file']['type'] == 'image/jpg'
-		|| $_FILES['file']['type'] == 'image/gif'
-		|| $_FILES['file']['type'] == 'image/jpeg'
-		|| $_FILES['file']['type'] == 'image/pjpeg')
-		{
-		    // setting file's mysterious name
-		    $filename = md5(date('YmdHis')).'.jpg';
-		    $file = $dir.$filename;
-		 
-		    // copying
-		    move_uploaded_file($_FILES['file']['tmp_name'], $file);
-		 
-		    // displaying file
-		    $array = array(
-		        'filelink' => 'img/work_img/'.$filename
-		    );
-		    echo stripslashes(json_encode($array));
-		}
+	if ($_POST['action'] == 'enter') {
+			$name = $_POST['name'];
+			$password = $_POST['password'];
+			$registOk = true;
+
+			$nameChek = getDataOne('SELECT `remember_token` FROM `users` WHERE `name` = "'.$_POST['name'].'" 
+				AND `password` = "'.$_POST['password'].'"');
+
+			if (!isset($nameChek)) {
+				$report = ["password"  => "Имя или пароль неправильные"];
+				$registOk = false;
+				echo json_encode($report);
+				exit();
+			}
+			else {
+				setcookie ("token", $nameChek->remember_token, 60 * 60 * 24 * 60 + time(), '/', NULL, 0 );
+				$report = ["enter"  => "ok"];
+				echo json_encode($report);
+			}
+
 	}

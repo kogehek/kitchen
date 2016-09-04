@@ -47,6 +47,9 @@ $user = new User();
 	}
 
 switch ($url) {
+	case '/authorization':
+		require_once 'controllers/controller_authorization.php';
+		exit;
 	case '/':
 		require_once 'controllers/controller_home.php';
 		exit;

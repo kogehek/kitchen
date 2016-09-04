@@ -12,6 +12,6 @@
 	</form>
 
 	<? } else { ?> 
-		<a href="/registration" class="menu-flex block-last" ><i class="fa fa-user"></i> Registration</a>
+		<a href="/authorization" class="menu-flex block-last" ><i class="fa fa-user"></i> Authorization</a>
 	<? } ?>
 </div>
