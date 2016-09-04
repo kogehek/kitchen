@@ -123,11 +123,11 @@ body {
 	position: absolute;
 	overflow: hidden;
 	padding: 3%;
-	font-size: 150%;
+	font-size: 110%;
 }
 
 .user-name a {
-	color: white;
+	color: black;
 	text-decoration: none;
 }
 
@@ -140,7 +140,8 @@ body {
 	background-repeat: no-repeat;
 	background-position: center; 
 	background-size: cover;
-    background-image: url("/img/Start_main.jpg");
+   /* background-image: url("/img/Start_main.jpg");*/
+ /*  	background-color: #cce0ff;*/
     z-index: -1;
 }
 
@@ -221,11 +222,12 @@ body {
 	left: 0;
 	top: 0;
 	/*background-color:rgba(32,32,32,0.1);*/
-	color: black;
+	color: white;
 	overflow: hidden;
 	padding: 0%;
 	text-align: center;
-	font-size: 180%;
+	font-size: 120%;
+	text-shadow: 2px 2px 4px black;
 
 }
 

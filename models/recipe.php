@@ -78,6 +78,11 @@
 			return $this->created_at;
 		}
 
+		function userName() {
+			$data = getDataOne('SELECT `name` AS `userName` FROM `users` WHERE `id` ="'.$this->user_id.'"');
+			return $data->userName;
+		}
+
 		function isLiked($userId) {
 			$data = getDataOne('SELECT COUNT(1) AS count FROM favorits WHERE user_id = '.$userId.' AND recipes_id = '.$this->id);
 			if ($data->count) {

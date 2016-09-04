@@ -22,7 +22,7 @@
 						<div class="block-buttons">
 							<div class="user-name">
 								<a href="/profile<?= $recipe->getUserId() ?>">
-									<div><?= $recipe->getName() ?></div>
+									<div><?= $recipe->userName() ?></div>
 								</a>
 							</div>
 							<div class="favorits block-button button-favorits" data-id="<?= $recipe->getId() ?> " 
